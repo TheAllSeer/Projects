@@ -1,0 +1,65 @@
+div {
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+.toolbar {
+  border: 2px solid grey;
+  width: auto;
+  aspect-ratio: auto;
+}
+.fileslist {
+  border: 2px solid rgb(158, 13, 13);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  inset: 0 0 50% 0;
+  height: 100%;
+  aspect-ratio: auto;
+  z-index: 99;
+  position: sticky;
+}
+
+/* have the files tab be easily opened/closed. I want to keep the cluster on the 
+screen to a minimum, Sublime like, but with the fileslist still being super easily 
+accessible. */
+.filetabs {
+  border: 2px solid green;
+  display: inline-block;
+  width: 100vw;
+  aspect-ratio: auto;
+}
+.typehere {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  font-family: monospace;
+  margin: 2px;
+  display: inline-block;
+  width: 92%;
+  position: relative;
+}
+.minimap {
+  border: 2px solid pink;
+  display: inline-block;
+  z-index: 99;
+  position: absolute;
+  right: 0;
+  /* position relative on parent, position absolute on child to make child still be in parent, 
+  but behaving how you want it to. */
+
+  /* fixed = absolute to the HTML document
+   absolute = absolute to the parent div.  */
+}
+.compiler {
+  border: 2px solid gold;
+  display: inline-block;
+}
+.footer {
+  border: 2px solid black;
+  display: inline-block;
+  width: 100vw;
+  aspect-ratio: auto;
+  bottom: 0;
+  /* position: sticky; */
+  /* sticky footer : bottom 0, position sticky */
+}
