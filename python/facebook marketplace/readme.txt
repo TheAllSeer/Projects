@@ -1,0 +1,1 @@
+this script scrapes facebook marketplace using python, selenium, beautifulsoup and requests. 

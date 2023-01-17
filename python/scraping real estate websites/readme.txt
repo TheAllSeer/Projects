@@ -1,0 +1,1 @@
+These python scripts scrape real estate websites for listings based on location. it then transforms the data into a database and saves it into a .csv format file. 
