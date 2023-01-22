@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.name {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  flex: 1;
+  margin: 20px;
+}
+
+.section-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.section-body {
+  font-size: 1.2em;
+  line-height: 1.5;
+}

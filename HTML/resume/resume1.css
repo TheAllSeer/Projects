@@ -43,3 +43,52 @@
 }
 
 /* general styling */
+
+:root {
+  --borderc: #2b2d42;
+  --bgc: #edf2f4;
+  --textc: #2b2d42;
+}
+ul {
+  list-style: none;
+}
+html {
+  background-color: var(--bgc);
+}
+/* borders */
+.contact-info {
+  border-bottom: solid 1px var(--borderc);
+}
+.summary {
+  border-bottom: solid 1px var(--borderc);
+  border-right: solid 1px var(--borderc);
+}
+.skills {
+  border-bottom: solid 1px var(--borderc);
+}
+.projects {
+  border-right: solid 1px var(--borderc);
+  border-bottom: solid 1px var(--borderc);
+}
+.exp {
+  border-bottom: solid 1px var(--borderc);
+}
+.certifications {
+  border-bottom: solid 1px var(--borderc);
+  border-left: solid 1px var(--borderc);
+}
+.education {
+  border-bottom: solid 1px var(--borderc);
+  border-left: solid 1px var(--borderc);
+}
+.cover-letter {
+  border-bottom: solid 1px var(--borderc);
+}
+
+/* other stylings */
+section {
+  padding: 1rem;
+  text-align: center;
+  color: var(--textc);
+  font-family: helvetica;
+}
