@@ -51,6 +51,98 @@ xhr.onreadystatechange = function () {
     flItem.innerHTML =
       '<i class="fa-brands fa-python"></i>: ' + data.header.freelance;
     document.querySelector("ul.contact-info").appendChild(flItem);
+
+    var name = document.querySelector("div.name");
+    name.innerHTML = data.name;
+
+    var coverLetterText = document.querySelector(".cover-letter>.section-body");
+    coverLetterText.innerHTML = data.coverLetter;
+
+    var aboutText = document.querySelector(".about>.section-body");
+    aboutText.innerHTML = data.about;
+
+    var projectsList = document.querySelector("ul.projects-ul");
+    projectsData = data.projects;
+    projectsDataObject = Object.values(projectsData);
+    projectsDataObject.forEach((o) => {
+      listItem = document.createElement("li");
+      title = o.title;
+      desc = o.desc;
+      titleItem = document.createElement("h3");
+      titleItem.innerHTML = title;
+      listItem.appendChild(titleItem);
+      descItem = document.createElement("p");
+      descItem.innerHTML = desc;
+      listItem.appendChild(descItem);
+      projectsList.appendChild(listItem);
+    });
+
+    var skillsList = document.querySelector("ul.skills-ul");
+    skillsData = data.skills;
+    skillsDataObject = Object.values(skillsData);
+    skillsDataObject.forEach((o) => {
+      listItem = document.createElement("li");
+      title = o.title;
+      desc = o.desc;
+      titleItem = document.createElement("h3");
+      titleItem.innerHTML = title;
+      listItem.appendChild(titleItem);
+      descItem = document.createElement("p");
+      descItem.innerHTML = desc;
+      listItem.appendChild(descItem);
+      skillsList.appendChild(listItem);
+    });
+
+    var expList = document.querySelector(".exp-ul");
+    expData = data.experience;
+    expDataO = Object.values(expData);
+    expDataO.forEach((o) => {
+      listItem = document.createElement("li");
+      title = o.title;
+      company = o.company;
+      time = o.time;
+      titleItem = document.createElement("h4");
+      titleItem.innerHTML = title;
+      listItem.appendChild(titleItem);
+      companyItem = document.createElement("h5");
+      companyItem.innerHTML = company;
+      listItem.appendChild(companyItem);
+      timeItem = document.createElement("p");
+      timeItem.innerHTML = time;
+      listItem.appendChild(timeItem);
+      expList.appendChild(listItem);
+    });
+
+    var eduUL = document.querySelector("ul.edu-ul");
+    eduData = data.education;
+    eduDataObject = Object.values(eduData);
+    eduDataObject.forEach((o) => {
+      listItem = document.createElement("li");
+      h4Item = document.createElement("h4");
+      h4Item.innerHTML = o.title + " - " + o.institution;
+      listItem.appendChild(h4Item);
+      listItem.append(o.desc);
+      eduUL.appendChild(listItem);
+    });
+    var hobbiesUL = document.querySelector(".hobbies-ul");
+    hobbiesData = data.hobbies;
+    hobbiesDataObject = Object.values(hobbiesData);
+    hobbiesDataObject.forEach((o) => {
+      listItem = document.createElement("li");
+      listItem.innerHTML = "<h3>" + o.title + "</h3> " + o.desc;
+      hobbiesUL.appendChild(listItem);
+    });
+
+    var certsDiv = document.querySelector("div.certs-body");
+    certs = data.certificates;
+    certsO = Object.values(certs);
+    certsO.forEach((o) => {
+      imge = document.createElement("img");
+      imge.src = o.src;
+      imge.alt = o.alt;
+      imge.style = "width:25rem;";
+      certsDiv.appendChild(imge);
+    });
   }
 };
 xhr.send();
